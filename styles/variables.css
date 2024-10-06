@@ -1,1 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --main-font: 'Inter-Variable';
+  --accent-font: 'PressStart2p-Regular';
+  --like-color-red: #FF0000;
+
+  --bg-color: #FFFFFF;
+  --accent-color: #000000;
+  --font-weight_main-txt: 400;
+  --font-weight_main-bold: 700;
+  --bg-img-color: #d3d3d3;
+  --gradient-top: #1a1a1a;
+  --gradient-bottom: #e7e7e7;
+  --teg-color: #FFFFFF;
+  --like-hover: #FFFFFF;
+}

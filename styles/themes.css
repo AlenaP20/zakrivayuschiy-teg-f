@@ -4,3 +4,59 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-dark {
+  --bg-color: #000000;
+  --accent-color: #00CC14;
+  --font-weight_main-txt: 465;
+  --font-weight_main-bold: 785;
+  --bg-img-color: #000000;
+  --gradient-top: #004306;
+  --gradient-bottom: #007f0c;
+  --teg-color:#000000;
+  --like-hover: #000000;
+
+}
+
+:root.theme-light {
+  --bg-color: #FFFFFF;
+  --accent-color: #000000;
+  --font-weight_main-txt: 400;
+  --font-weight_main-bold: 700;
+  --bg-img-color: #d3d3d3;
+  --gradient-top: #1a1a1a;
+  --gradient-bottom: #e7e7e7;
+  --teg-color: #FFFFFF;
+  --like-hover: #FFFFFF;
+}
+
+
+/* предпочтения пользователя */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000000;
+    --accent-color: #00CC14;
+    --font-weight_main-txt: 465;
+    --font-weight_main-bold: 785;
+    --bg-img-color: #000000;
+    --gradient-top: #004306;
+    --gradient-bottom: #007f0c;
+    --teg-color:#000000;
+    --like-hover: #000000;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #FFFFFF;
+    --accent-color: #000000;
+    --font-weight_main-txt: 400;
+    --font-weight_main-bold: 700;
+    --bg-img-color: #d3d3d3;
+    --gradient-top: #1a1a1a;
+    --gradient-bottom: #e7e7e7;
+    --teg-color: #FFFFFF;
+    --like-hover: #FFFFFF;
+  }
+}
