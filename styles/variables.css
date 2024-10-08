@@ -2,7 +2,7 @@
 
 :root {
   --main-font: 'Inter-Variable';
-  --accent-font: 'PressStart2p-Regular';
+  --accent-font: 'PressStart2P';
   --like-color-red: #FF0000;
 
   --bg-color: #FFFFFF;
@@ -14,4 +14,5 @@
   --gradient-bottom: #e7e7e7;
   --teg-color: #FFFFFF;
   --like-hover: #FFFFFF;
+  --mix-blend-color: #FFFFFF;
 }

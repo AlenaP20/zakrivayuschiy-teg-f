@@ -15,6 +15,7 @@
   --gradient-bottom: #007f0c;
   --teg-color:#000000;
   --like-hover: #000000;
+  --mix-blend-color: #00CC14;
 
 }
 
@@ -28,6 +29,7 @@
   --gradient-bottom: #e7e7e7;
   --teg-color: #FFFFFF;
   --like-hover: #FFFFFF;
+  --mix-blend-color: #FFFFFF;
 }
 
 
@@ -44,19 +46,6 @@
     --gradient-bottom: #007f0c;
     --teg-color:#000000;
     --like-hover: #000000;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-color: #FFFFFF;
-    --accent-color: #000000;
-    --font-weight_main-txt: 400;
-    --font-weight_main-bold: 700;
-    --bg-img-color: #d3d3d3;
-    --gradient-top: #1a1a1a;
-    --gradient-bottom: #e7e7e7;
-    --teg-color: #FFFFFF;
-    --like-hover: #FFFFFF;
+    --mix-blend-color: #00CC14;
   }
 }

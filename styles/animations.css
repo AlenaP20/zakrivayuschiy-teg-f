@@ -12,6 +12,7 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
 .theme-menu__button:disabled {
   pointer-events: none;
   opacity: 60%;
@@ -22,16 +23,16 @@
   position: absolute;
   color:  var(--accent-font);
   animation: marker_button 0.5s ease-in-out infinite alternate-reverse;
-  inset-inline-start: -20px;
+  inset-block-end: 2px;
 }
 
 @keyframes marker_button {
   from {
-    inset-inline-start: -20px;
+    inset-inline-start: -19px;
   }
 
   to {
-    inset-inline-start: -18px;
+    inset-inline-start: -15px;
   }
 }
 
@@ -47,7 +48,6 @@
 
 .theme-menu__button:focus-visible {
   opacity: 60%;
-  transition: opacity 0.3s;
 }
 
 .theme-menu__button::after {
@@ -56,44 +56,11 @@
   width: 0%;
   height: 2px;
   background-color: var(--accent-color);
+  transition: 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
-  content: '';
-  display: block;
   width: 100%;
-  transition: width 0.2s;
-}
-
-.card__like-button .button__text {
-  position: relative;
-  z-index: 2;
-}
-
-.card__like-button::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: var(--accent-color);
-  transition: 0.5s ease-in-out;
-}
-
-.card__like-button:hover::after {
-  width: 100%;
-}
-
-.card__like-button:hover .button__text {
-  color: var(--like-hover);
-  transition: color 0.5s ease-in-out;
-}
-
-.card__like-button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color);
-  transition: box-shadow 0.2s;
 }
 
 .card__icon-button:focus {
@@ -102,45 +69,51 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
-  transition: outline 0.3s ease;
+  outline-offset: -3px;
 }
 
 .sparks {
   opacity: 0;
 }
 
-/* hover */
+.like-icon .core {
+  transition: fill 0.3s 0.03s linear;
+  fill: var(--bg-color);
+}
 
 .like-icon:hover .core {
   fill: var(--accent-color);
+  transition: fill 0.3s linear;
 }
 
 .like-icon .main-body {
-  transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear;
+  fill: transparent;
 }
 
 .like-icon:hover .main-body {
   fill: var(--accent-color);
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon .core {
   transition: fill 0.3s linear 0.03s;
+  fill: transparent;
 }
 
 .like-icon:active .core {
   fill: var(--like-color-red);
+  transition: fill 0.3s linear;
+}
+
+.like-icon .main-body {
+  transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
   fill: var(--like-color-red);
+  transition: fill 0.3s linear 0.05s;
 }
-
-.like-icon:active .contour {
-  fill: var(--like-color-red);
-  transition: fill 0.3s linear 0.06s;
-}
-
-/* is-liked */
 
 .like-icon.is-liked .contour {
   fill: var(--like-color-red);
@@ -207,79 +180,44 @@
   transition: fill 0.1s linear;
 }
 
+.button {
+  border: 2px solid var(--accent-color);
+  position: relative;
+  cursor: pointer;
+}
 
-.footer_button:focus {
+.button__text {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+  display: block;
+  font-family: var(--accent-font, fantasy);
+  color: var(--mix-blend-color);
+  font-size: 14px;
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--accent-color);
+  transition: 0.5s ease-in-out;
+}
+
+.button:hover::after {
+  width: 100%;
+}
+
+.button:focus {
   outline: none;
   box-shadow: 2px 2px 0 var(--accent-color);
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .footer_button .footer_disket {
   position: relative;
   z-index: 2;
 }
-
-.footer_button .button__text {
-  position: relative;
-  z-index: 3;
-}
-
-.footer_button::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: var(--accent-color);
-  transition: 0.5s ease-in-out;
-}
-
-.footer_button:hover::after {
-  width: 100%;
-}
-
-.footer_button:hover .button__text {
-  color: var(--like-hover);
-  transition: color 0.5s ease-in-out;
-}
-
-.footer_button:hover .footer_disket {
-  color: var(--like-hover);
-  transition: color 0.5s ease-in-out;
-}
-
-
-.modal__button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color);
-  transition: box-shadow 0.2s;
-}
-
-
-
-.modal__button .button__text {
-  position: relative;
-  z-index: 2;
-}
-
-.modal__button::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: var(--accent-color);
-  transition: 0.5s ease-in-out;
-}
-
-.modal__button:hover::after {
-  width: 100%;
-}
-
-.modal__button:hover .button__text {
-  color: var(--like-hover);
-  transition: color 0.5s ease-in-out;
-}
-
