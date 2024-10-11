@@ -202,7 +202,9 @@
 
 .like-icon {
   block-size: 36px;
-  inline-size: 39px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .card__icon-button {

@@ -69,7 +69,6 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
-  outline-offset: -3px;
 }
 
 .sparks {
@@ -175,6 +174,7 @@
   border: 2px solid var(--accent-color);
   position: relative;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .button__text {
@@ -205,7 +205,6 @@
 .button:focus {
   outline: none;
   box-shadow: 2px 2px 0 var(--accent-color);
-  transition: box-shadow 0.5s ease-in-out;
 }
 
 .footer_button .footer_disket {
